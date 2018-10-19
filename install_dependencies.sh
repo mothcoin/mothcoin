@@ -71,19 +71,19 @@ function installUbuntu {
 
   if [[ $DISTRIB_ID=Ubuntu && $DISTRIB_RELEASE == 16.04 ]] ; then
     sudo apt-get update
-    sudo apt-get -y install build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost1.58-all-dev librocksdb-dev
+    sudo apt-get -y install build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost1.58-all-dev librocksdb-dev libminiupnpc-dev libminiupnpc10
     export CXXFLAGS="-std=gnu++11"
 
     doneMessage
   elif [[ $DISTRIB_ID=Ubuntu && $DISTRIB_RELEASE == 16.10 ]] ; then
     sudo apt-get update
-    sudo apt-get -y install build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost1.61-all-dev librocksdb-dev
+    sudo apt-get -y install build-essential python-dev gcc-4.9 g++-4.9 git cmake libboost1.61-all-dev librocksdb-dev libminiupnpc-dev libminiupnpc10
     export CXXFLAGS="-std=gnu++11"
 
     doneMessage
   elif [[ $DISTRIB_ID=Ubuntu && $DISTRIB_RELEASE == 18.04 ]] ; then
     sudo apt-get update
-    sudo apt-get -y install build-essential python-dev gcc-7 g++ git cmake libboost1.62-all-dev libboost1.62-dev libboost1.62-tools-dev libboost-mpi-python1.62-dev librocksdb-dev libboost-mpi-python1.62.0
+    sudo apt-get -y install build-essential python-dev gcc-7 g++ git cmake libboost1.62-all-dev libboost1.62-dev libboost1.62-tools-dev libboost-mpi-python1.62-dev librocksdb-dev libboost-mpi-python1.62.0 libminiupnpc-dev libminiupnpc10
     export CXXFLAGS="-std=gnu++11"
   else
     echo "Only Ubuntu 16.04 & 18.04 is supported"
